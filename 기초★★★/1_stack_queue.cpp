@@ -30,7 +30,7 @@ int main(void)
     /*
     q.size() : q 사이즈
     q.empty() : q 사이즈가 0인지 확인.
-    q.front() : q에서 제일 앞에 있는 변수 반환.
+    q.front() : q에서 제일 앞에 있는 변수 반환. (가장 나중에 들어간)
     q.back() : q에서 제일 뒤에 있는 변수 반환.
     q.push(var) : q의 맨 뒤에 var를 추가.
     q.pop() : q의 가장 나중에 들어간 원소를 삭제
