@@ -1,81 +1,64 @@
 /*
-이진트리의 노드 생성, 삽입, 삭제와
-전위, 중위, 후위 순회 방법을 공부함.
+동적할당 기본문제
+* list 만들 시 가급적 인덱스 1부터 시작할 것.
+->크기 N이랑 같이 쓸 때 혼동됨.
 */
 
+
 #include <iostream>
+#include <vector>
+#include <stack>
+#include <algorithm>
 using namespace std;
-struct Node {
-    char data;
-    struct Node *left;
-    struct Node *right;
-};
-void preOrder(struct Node *node);
-void postOrder(struct Node *node);
-void inOrder(struct Node *node);
+const int UNKNOWN = -1;
+int N;
+int p[1001][3];
+int dp_[1001][3];
+
+
+int DP(int n, int color)
+{
+    if(dp_[n][color] != UNKNOWN)
+    {
+        return dp_[n][color];
+    } 
+    if(n>1)
+    {
+        switch(color)
+        {
+            case 0:
+                dp_[n][color] = min(DP(n-1,1),DP(n-1,2))+p[n][0];
+                break;
+            case 1:
+                dp_[n][color] = min(DP(n-1,0),DP(n-1,2))+p[n][1];
+                break;     
+            case 2:
+                dp_[n][color] = min(DP(n-1,0),DP(n-1,1))+p[n][2];     
+                break;
+        }
+    }
+    else
+    {
+        dp_[n][color] = p[1][color];
+    }
+    return dp_[n][color];
+
+}
 
 int main(void)
 {
-    int N;
-    cin >> N;
-   
-    Node *NodeList[26];    
-    // 노드를 먼저 생성하고 시작.
-    for(int i=0; i<N;i++)
+    cin>>N;
+    for(int i=1;i<=N;i++)
     {
-         Node *rootNode = new Node();  
-         NodeList[i] = rootNode;
+        for(int j=0;j<3;j++)        
+        {
+            cin>>p[i][j];
+            dp_[i][j] = UNKNOWN;
+            
+        }
     }
-    // 노드를 이미 생성했기 때문에 데이터와 연결만 넣어주면 됨.
-    for(int i=0; i<N;i++)
-    {  
-        char rootData, left, right;
-        cin>>rootData>>left>>right; 
-        NodeList[rootData-'A']->data = rootData;
-        if(left=='.')   
-            NodeList[rootData-'A']->left = NULL; 
-        else 
-            NodeList[rootData-'A']->left = NodeList[left-'A'];
-        if(right=='.')    
-            NodeList[rootData-'A']->right = NULL; 
-        else
-            NodeList[rootData-'A']->right = NodeList[right-'A'];
-    }
-    //전위 순회 : root->left->right
-    preOrder(NodeList[0]);
-    cout<<endl;
-    //중위 순회 : left->root->right
-    inOrder(NodeList[0]);
-    cout<<endl;
-    //후위 순회 : left->right->root
-    postOrder(NodeList[0]);
-    cout<<endl;
+
+    cout<<min(min(DP(N,0),DP(N,1)),DP(N,2));
+
     return 0;
-}
-void preOrder(struct Node *node)
-{
-    if(node!=NULL)
-    {
-    cout<<node->data; //root
-    preOrder(node->left);
-    preOrder(node->right);
-    }
-}
-void inOrder(struct Node *node)
-{
-    if(node!=NULL)
-    {
-    inOrder(node->left);
-    cout<<node->data; //root
-    inOrder(node->right);
-    }
-}
-void postOrder(struct Node *node)
-{
-    if(node!=NULL)
-    {
-    postOrder(node->left);
-    postOrder(node->right);
-    cout<<node->data; //root
-    }
 }
