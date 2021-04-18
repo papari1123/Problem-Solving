@@ -15,3 +15,7 @@ RGB거리에는 집이 N개 있다. 거리는 선분으로 나타낼 수 있고,
 int house[N+1]; // N+1개 선언함. <br/>
 **vector를 사용할 경우 : <br/>**
 score.push_back(UNKNOWN);  //처음에 dummy 원소 추가함.<br/>
+
+# 2. DP 문제 
+
+- 백준 2579번과 2156번 참고.
