@@ -19,3 +19,7 @@ score.push_back(UNKNOWN);  //처음에 dummy 원소 추가함.<br/>
 # 2. DP 문제 
 
 - 백준 2579번과 2156번 참고.
+
+# 3. 입출력에 따른 시간초과
+
+- https://www.acmicpc.net/problem/15552
