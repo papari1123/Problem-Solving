@@ -1,10 +1,11 @@
-print('01_for¿Í range')
+# -*- coding: utf-8 -*-
+print('01_forì™€ range')
 for i in range(10): # 0~9
     print('i1:'+ str(i)) 
-for i in range(10, 0,-1) : # 10~1, -1¾¿ °¨¼Ò
+for i in range(10, 0,-1) : # 10~1, -1ì”© ê°ì†Œ
     print('i2:' + str(i)) 
 for i in reversed(range(10)): # 9~0
     print('i3:'+str(i))
 a = [1,2,3,4,5,6,7,8]
-for i in a:  # ½ÃÄö½º °´Ã¼¸¦ ³ÖÀ» ¼ö ÀÖÀ½.
+for i in a:  # ì‹œí€€ìŠ¤ ê°ì²´ë¥¼ ë„£ì„ ìˆ˜ ìˆìŒ.
   print('i4:'+str(i))
