@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Apr 18 12:24:45 2021
-
-@author: Kaleidosoft
 """
 
 print('01. 리스트 생성')
