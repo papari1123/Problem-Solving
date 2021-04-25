@@ -38,7 +38,7 @@ print(x.keys()) # 키를 모두 가져옴.
 print(x.values()) #값을 모두 가져옴.
 
 print('07 반복문으로 키-값 출력')
-for i in x: #키만 출력됨.
+for i in x: #키만 출력됨. x.keys() 도 동일
     print(i,end=' ')
 for key, value in x.items(): #키와 값 모두 출력됨.
     print(key,value)

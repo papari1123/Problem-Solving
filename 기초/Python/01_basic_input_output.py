@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 print('1. 입력값 두 개의 변수에 저장.')
 a,b = input().split()
 print(a)
@@ -28,3 +29,6 @@ print('6. end를 이용해 print 문의 끝에 뭐가 출력될지 정할 수 �
 print(1,end='')
 print(2,end='')
 print(3,end='')  
+
+print('7. 빠른 입출력')
+sys.stdin.readline().rstrip()
