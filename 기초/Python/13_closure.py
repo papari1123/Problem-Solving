@@ -35,3 +35,13 @@ def calc():
  
 c = calc() # closure
 print(c(1), c(2), c(3), c(4), c(5))
+
+# 4. lambda를 이용한 closure
+# 익명함수인 lambda를 closure와 함께 사용할 수 있음.
+def calc():
+    a = 3
+    b = 5
+    return lambda x: a * x + b    # 람다 표현식을 반환
+ 
+c = calc()
+print(c(1), c(2), c(3), c(4), c(5))
