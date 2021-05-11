@@ -40,7 +40,7 @@ class 이터레이터이름:
         코드
 """
 class Counter:
-    def __iter__(self, stop):
+    def __init__(self, stop):
         self.current = 0
         self.stop = stop
     
@@ -52,7 +52,7 @@ class Counter:
             r = self.current
             self.current += 1
             return r
-        else
+        else:
             raise StopIteration
 for i in Counter(3):
     print(i,end=' ')
@@ -66,9 +66,29 @@ print(a,b,c)
 class Counter_index:
     def __init__(self, stop):
         self.stop = stop;
-    deof __getitem__(self, index):
+    def __getitem__(self, index):
         if  index < self.stop :
             return index
         else :
             return IndexError
 print(Counter_index(3)[0])
+
+#7. 내장함수 iter, next 기본
+it = iter(range(3)) # iter 메서드는 객채의 __iter__메서드를 호출해준다.
+next_ = next(it) # next 메서드는 객체의 __next__메서드를 호출해준다.
+print(next_)
+
+#8. iter(호출가능한 객체, 반복을 끝낼 값)
+# 반복가능한 객체가 아니라, 호출 가능한 객체임.
+# 매개변수가 없는 함수나 람다 표현식을 만들어 줄 수 있음.
+import random
+it = iter(lambda : random.randint(0,5),2) 
+print(next(it))
+
+#9. next(반복가능한 객체, 기본값)
+print(next(it,10))
+print(next(it,10))
+print(next(it,10))
+print(next(it,10))
+print(next(it,10))
+print(next(it,10))
