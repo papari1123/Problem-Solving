@@ -92,3 +92,5 @@ print(next(it,10))
 print(next(it,10))
 print(next(it,10))
 print(next(it,10))
+
+print(dir(range(5)))
