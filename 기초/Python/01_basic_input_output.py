@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-print('1. 입력값 두 개의 변수에 저장.')
+print('1. 입력값 두 개의 변수에 저장..')
 a,b = input().split()
 print(a)
 print(b)
@@ -31,4 +31,4 @@ print(2,end='')
 print(3,end='')  
 
 print('7. 빠른 입출력')
-sys.stdin.readline().rstrip()
+#sys.stdin.readline().rstrip()
