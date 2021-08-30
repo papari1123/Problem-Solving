@@ -15,6 +15,13 @@ print(sorted("This is a test string from Andrew".split(), key=str.lower))
 print(sorted(['as','was','were','He','tester'],key=len)) #길이를 기준으로 정렬렬rint('04. key 함수를 이용한 정렬')
 
 print('05. 중복을 제거한 리스트')
-raw = [1,2,3,4,2,1,2,1,2,3,4,5,6,4,2,1,2,]
-unique_list = list(set()) # 중복을 제거, 그러나 정렬은 안됨.
-unique_sorted_list = list(dict.fromkeys(raw)) #중복을 제거하면서 정렬됨. python 3.7 dictionary key 넣는 순서를 기억한다.
+raw = [1,4,3,4,2,1,2,1,2,3,4,5,6,4,2,1,2,]
+unique_list = list(set(raw)) # 중복을 제거, 그러나 순서 유지가 안됨.
+print(unique_list)
+# 결과 1 2 3 4 5 6
+fromkey = dict.fromkeys(raw)
+unique_sorted_list = list(fromkey) #중복을 제거하면서 순서가 유지됨. python 3.7 dictionary key 넣는 순서를 기억한다.
+print(fromkey)
+print(unique_sorted_list)
+# 결과 1 4 3 2 5 6
+

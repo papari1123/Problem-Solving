@@ -45,9 +45,10 @@ for key, value in x.items(): #키와 값 모두 출력됨.
 for value in x.values():
     print(value,end=' ') #값만 가져옴.
 
-print('08 반복문을 이용한 딕셔너리 생성')
-key = ['a','b','c','d'] #키를 이용한 생성
-x = {key:value for key,value in dict.fromleys(keys).items()}
+print('08 반복문을 이용한 빈 딕셔너리 생성')
+keys = ['a','b','c','d'] #키를 이용한 생성
+x = {key:value for key,value in dict.fromkeys(keys).items()}
 #dict.fromkeys(keys).items()로 키:값 가져옴.
-values = [1,2,3,4,5]
+# keys 값을 key list로 하여 none의 값을 가지는 value list를 생성하고 dictionary를 만듦.
+print(x)
 

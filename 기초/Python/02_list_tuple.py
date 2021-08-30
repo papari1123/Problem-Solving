@@ -35,20 +35,21 @@ a[2:2] = [500,600] # 2번쨰 인덱스부터 500,600을 추가
 a.insert(2,[500,600]) # 2번째 인덱스에 [500,600]추가
 print(a)
 a.pop() #마지막 요소 삭제
-a.pop(1) #첫번째 요소 삭제
+a.pop(1) #첫번째 요소 삭제 
 del a[1] #마찬가지로 첫번째 요소 삭제
 a.remove(500) # 특정값 500 삭제
-
+print(a)
 print('08. 리스트를 활용한 스택과 큐')
 stack = list()
 stack.append(1) #1을 추가
 stack.append(2) #2를 추가
 stack.pop() # last in 제거
+
 queue = list()
 queue.append(1) #1을 추가
 queue.append(2) #2를 추가
-queue.pop(0) # first in 제거
-
+queue.pop(0) # first in 제거 (0번째)
+print(queue)
 print('09. 덱 만들기 (double ended queue)')
 #덱은 양방향으로 삭제가 가능한 큐라고 볼 수 있음.
 deque_ = deque([10,20,30])
