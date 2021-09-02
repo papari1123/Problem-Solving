@@ -36,4 +36,5 @@ print(test.find('pe')) #찾는게 없으면 -1 반환
 print('09 문자열 개수 세기')
 print(test.count('pe'))
 
-
+print('10 문자열 길이 구하기')
+print(len(test))
