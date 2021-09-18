@@ -42,7 +42,7 @@ def lca(root, n1, n2):
         return lca(root.right, n1, n2)
  
     return root
-    
+
 def search(root,key):
      
     # Base Cases: root is null or key is present at root
@@ -57,8 +57,8 @@ def search(root,key):
     return search(root.left,key)
 
 # This code is contributed by Bhavya Jain
-r1 = Node(20)
-r = insert(r1,22)
+r = Node(20)
+r = insert(r,22)
 r = insert(r,8)
 r = insert(r,4)
 r = insert(r,12)
