@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+print('00. 문자열이 아닌 자료형의 변환')
+de = 'test' + str(2.5)
+
 print('01 문자열 바꾸기')
 print('hello world!'.replace('world!','python'))
 
@@ -7,9 +10,17 @@ table = str.maketrans('abcde','12345') # abcde 각 문자를 12345로 변환하�
 a = 'apple'.translate(table)
 print(a)
 
-print('03 문자열 분리')
-t = 'c java python verilog go'.split(" ")
-print(t[2])
+print('03 문자열 결합 및 분리')
+t = ['c','java','python','veilog','go']
+t1 =' '.join(t)
+t2 = '-'.join(t)
+print(t1)
+print(t2)
+t3 = t1.split()
+t4 = t2.split('--')
+print(t3[2])
+print(t3)
+print(t4)
 
 print('04 문자열 연결')
 d ='$'.join(t)

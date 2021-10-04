@@ -30,7 +30,7 @@ void BFS(int start)
             {
                 check[next] = 1;
                 q.push(next); 
-            }
+            } 
         }           
     }
 }

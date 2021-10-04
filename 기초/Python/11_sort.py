@@ -16,7 +16,7 @@ print(sorted(['as','was','were','He','tester'],key=len)) #길이를 기준으로
 
 print('05. 중복을 제거한 리스트')
 raw = [1,4,3,4,2,1,2,1,2,3,4,5,6,4,2,1,2,]
-unique_list = list(set(raw)) # 중복을 제거, 그러나 순서 유지가 안됨.
+unique_list = list(set(raw)) # 중복을 제거, 그러나 순서 유지가 안됨. -> 오름차순으로 정렬됨
 print(unique_list)
 # 결과 1 2 3 4 5 6
 fromkey = dict.fromkeys(raw)
