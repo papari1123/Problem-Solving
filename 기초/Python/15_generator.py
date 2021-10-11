@@ -74,8 +74,7 @@ for i in number_from_generator():
 # 5.2 yield from 이터레이터
 def number_iter_generator():
     x = iter([1,2,3])
-    yield from (x+2)
-    
+    yield from x
 
 for i in number_iter_generator():
     print(i)
